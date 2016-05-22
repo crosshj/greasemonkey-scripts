@@ -32,7 +32,6 @@ usr         = decodeOrPrompt (usr,   "U-name", "lognUsr");
 pword       = decodeOrPrompt (pword, "P-word", "lognPwd");
 autoLogin   = decodeOrPrompt (autoLogin, "AutoLogin", "autoLogin");
 
-
 function decodeOrPrompt (targVar, userPrompt, setValVarName) {
     if (targVar) {
         targVar     = unStoreAndDecrypt (targVar);
@@ -79,7 +78,6 @@ function promptAndChangeStoredValue (targVar, userPrompt, setValVarName) {
     );
     GM_setValue (setValVarName, encryptAndStore (targVar) );
 }
-
 
 (function() {
     'use strict';
