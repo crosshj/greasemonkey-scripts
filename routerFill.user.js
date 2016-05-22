@@ -90,7 +90,7 @@ function promptAndChangeStoredValue (targVar, userPrompt, setValVarName) {
     if (pwordEl && pword){
         pwordEl.value=pword;
     }
-    if (autoLogin && autoLogin.toLowerCase() === 'true') {
+    if (autoLogin && autoLogin.toLowerCase() === 'true' && login) {
         login();
     }
 })();
