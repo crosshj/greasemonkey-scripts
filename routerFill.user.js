@@ -12,7 +12,8 @@
 // @grant    GM_registerMenuCommand
 // ==/UserScript==
 
-// credit for encrypt/decrypt/store vars to http://stackoverflow.com/questions/15268645/storing-user-input-in-a-greasemonkey-script-on-install
+// credit for encrypt/decrypt/store vars 
+// http://stackoverflow.com/questions/15268645/storing-user-input-in-a-greasemonkey-script-on-install
 
 var encKey  = GM_getValue ("encKey",  "");
 var usr     = GM_getValue ("lognUsr", "");
