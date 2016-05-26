@@ -15,7 +15,7 @@
 
 
 
-// https://somethingididnotknow.wordpress.com/2013/07/01/change-page-styles-with-greasemonkeytampermonkey/ 
+// https://somethingididnotknow.wordpress.com/2013/07/01/change-page-styles-with-greasemonkeytampermonkey/
 function addGlobalStyle(css) {
     var head, style;
     head = document.getElementsByTagName('head')[0];
