@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Jira Fixer
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
+// @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jiraFixer.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jiraFixer.user.js
 // @version      0.1.5
 // @description  try to take over the world!
