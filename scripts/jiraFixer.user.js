@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Jira Fixer
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
-// @version      0.1.1
+// @version      0.1.2
 // @description  try to take over the world!
 // @author       HJ Criss
 // @match        https://*.atlassian.net/secure/RapidBoard.jspa*
