@@ -3,7 +3,7 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jiraFixer.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jiraFixer.user.js
-// @version      0.1.5
+// @version      0.1.6
 // @description  try to take over the world!
 // @author       HJ Cross
 // @match        https://*.atlassian.net/secure/RapidBoard.jspa*
