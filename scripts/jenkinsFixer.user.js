@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Jenkins Modify
+// @name         Jenkins Fixer
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jenkinsFixer.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jenkinsFixer.user.js
-// @version      0.1.1
+// @version      0.1.2
 // @description  try to take over the world!
 // @author       HJ Cross
 // @match        http://ci.*.com/*
