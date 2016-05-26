@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name         Router Fill
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
+// @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
+// @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
 // @version      0.1
 // @description  auto fill and auto login for RT-AC68
 // @author       HJ Cross
