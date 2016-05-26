@@ -3,7 +3,7 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
-// @version      0.1
+// @version      0.1.1
 // @description  auto fill and auto login for RT-AC68
 // @author       HJ Cross
 // @match        http://192.168.1.1/*
