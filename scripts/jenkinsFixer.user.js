@@ -6,7 +6,7 @@
 // @version      0.1.3
 // @description  Fix some Jira issues
 // @author       HJ Cross
-// @include      /^https?://ci\..*\.com/.*$/
+// @include      /^http?://ci\..*\.com/.*$/
 // @run-at document-start
 // @grant        none
 // ==/UserScript==
