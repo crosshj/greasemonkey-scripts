@@ -2,7 +2,7 @@
 // @name         Jira Fixer
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jiraFixer.user.js
-// @version      0.1.2
+// @version      0.1.3
 // @description  try to take over the world!
 // @author       HJ Cross
 // @match        https://*.atlassian.net/secure/RapidBoard.jspa*
@@ -11,6 +11,8 @@
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
+
+// WIP!!!
 
 GH.WorkView.openOrCloseDetailView = function(story){
     document.querySelector('#ghx-detail-view').style.display="none";
