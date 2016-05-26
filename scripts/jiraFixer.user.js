@@ -2,7 +2,7 @@
 // @name         Jira Fixer
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jiraFixer.user.js
-// @version      0.1.4
+// @version      0.1.5
 // @description  try to take over the world!
 // @author       HJ Cross
 // @match        https://*.atlassian.net/secure/RapidBoard.jspa*
