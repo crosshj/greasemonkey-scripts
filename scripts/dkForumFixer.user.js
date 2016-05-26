@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         DK Forums Fixer
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/crosshj/greasemonkey-scripts
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  fix some issues with DK Forum site (hard to browse at work / annoying issues)
+// @author       HJ Cross
 // @match        *forums.dungeonkeeper.com/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
-// @run-at document-start
+// @run-at       document-start
 // ==/UserScript==
 
 
