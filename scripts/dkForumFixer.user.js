@@ -3,7 +3,7 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/dkForumFixer.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/dkForumFixer.user.js
-// @version      0.1.2
+// @version      0.1.3
 // @description  fix some issues with DK Forum site (hard to browse at work / annoying issues)
 // @author       crosshj
 // @match        *forums.dungeonkeeper.com/*
@@ -16,10 +16,9 @@
 
 (function() {
     'use strict';
-    addGlobalStyle('#bodybg { background: rgb(51, 51, 51); }');
-    
     document.addEventListener("DOMNodeInserted", function(event) {
-        console.log("-----DOMNodeInserted");
+        console.log("-----DOMNodeInserted", event );
+        console.log("-----Stylesheets", document.styleSheets.length);
         // remove header
         if ((document.getElementById('dkheader'))) {
             console.log('--- found dkheader');
@@ -30,6 +29,7 @@
 
     document.addEventListener("DOMContentLoaded", function(event) {
         console.log("DOM fully loaded and parsed");
+        addGlobalStyle('#bodybg { background: rgb(51, 51, 51) !important; }');
         //debugger;
         // TODO: want to avoid showing/loading images at all
         var images = document.getElementsByTagName('img');
