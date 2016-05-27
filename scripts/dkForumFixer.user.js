@@ -9,13 +9,15 @@
 // @match        *forums.dungeonkeeper.com/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
+// @require      https://github.com/crosshj/greasemonkey-scripts/raw/master/utils/changeCSS.js
 // @run-at       document-start
 // ==/UserScript==
 
 
 (function() {
     'use strict';
-
+    addGlobalStyle('#bodybg { background: rgb(51, 51, 51); }');
+    
     document.addEventListener("DOMNodeInserted", function(event) {
         console.log("-----DOMNodeInserted");
         // remove header
