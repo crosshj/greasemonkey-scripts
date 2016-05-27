@@ -3,10 +3,11 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jenkinsFixer.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/jenkinsFixer.user.js
-// @version      0.1.5
+// @version      0.1.7
 // @description  Fix some Jira issues
 // @author       HJ Cross
-// @include      /.*ci\..*\.com/.*$/
+// @match        http://ci.*.com*
+// @include      /^http?://ci\..*\.com.*$/
 // @run-at document-start
 // @grant        none
 // ==/UserScript==
