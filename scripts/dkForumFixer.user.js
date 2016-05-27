@@ -3,7 +3,7 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/dkForumFixer.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/dkForumFixer.user.js
-// @version      0.1.1
+// @version      0.1.2
 // @description  fix some issues with DK Forum site (hard to browse at work / annoying issues)
 // @author       crosshj
 // @match        *forums.dungeonkeeper.com/*
