@@ -3,15 +3,16 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
-// @version      0.1.2
+// @version      0.1.3
 // @description  auto fill and auto login for RT-AC68
 // @author       HJ Cross
 // @match        http://192.168.1.1/*
-// @require  http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
-// @require  http://crypto.stanford.edu/sjcl/sjcl.js
-// @grant    GM_getValue
-// @grant    GM_setValue
-// @grant    GM_registerMenuCommand
+// @match        http://router.asus.com/*
+// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
+// @require      http://crypto.stanford.edu/sjcl/sjcl.js
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @grant        GM_registerMenuCommand
 // ==/UserScript==
 
 // credit for encrypt/decrypt/store vars 
