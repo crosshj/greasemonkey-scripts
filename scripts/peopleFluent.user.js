@@ -10,7 +10,7 @@
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // @require      https://github.com/crosshj/greasemonkey-scripts/raw/master/utils/changeCSS.js
-// @run-at       document-end
+// @run-at       document-idle
 // ==/UserScript==
 
 (function() {
