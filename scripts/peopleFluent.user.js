@@ -3,7 +3,7 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/peopleFluent.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/peopleFluent.user.js
-// @version      0.0.2
+// @version      0.0.3
 // @description  fixes some issues with People Fluent site
 // @author       crosshj
 // @match        *vms.peopleclick.com/*
@@ -16,7 +16,9 @@
 (function() {
     'use strict';
 
-    document.querySelectorAll('input[type="password"]').forEach(function(item){ item.autocomplete = "on" });
+    document.querySelectorAll('input[type="password"]').forEach(function(item){
+        item.autocomplete = "on";
+    });
     document.querySelector('input[type="password"]#orgField').type="text";
 
 })();
