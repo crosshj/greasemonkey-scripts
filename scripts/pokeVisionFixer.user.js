@@ -8,7 +8,7 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/pokevision.user.js
 // @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/pokevision.user.js
-// @version      0.0.1
+// @version      0.0.2
 // @description  fix some issues pokevision
 // @author       crosshj
 // @match        *pokevision.com*
@@ -28,7 +28,7 @@
 
     document.addEventListener("DOMContentLoaded", function(event) {
         console.log("DOM fully loaded and parsed");
-        addGlobalStyle('main.home-sidebar { height: 1px; width:1px; overflow: hidden; padding: 0px; margin-top: 200px; }');
+        addGlobalStyle('main.home-sidebar { height: 1px; width:1px !important; overflow: hidden !important; padding: 0px !important; margin-top: 200px; }');
     });
 
     $(document).ready(function() {
