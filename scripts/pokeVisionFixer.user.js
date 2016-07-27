@@ -6,8 +6,8 @@
 // ==UserScript==
 // @name         PokeVision Fixer
 // @namespace    https://github.com/crosshj/greasemonkey-scripts/
-// @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/pokevision.user.js
-// @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/pokevision.user.js
+// @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/pokeVisionFixer.user.js
+// @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/pokeVisionFixer.user.js
 // @version      0.0.2
 // @description  fix some issues pokevision
 // @author       crosshj
