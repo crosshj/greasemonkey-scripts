@@ -3,8 +3,8 @@
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
 // @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/youtubeFixer.user.js
 // @downloadURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/youtubeFixer.user.js
-// @version      0.2
-// @description  try to take over the world!
+// @version      0.3
+// @description  Fix Youtube annoyances
 // @author       Harrison Cross
 // @include      http://www.youtube.com/*
 // @include      https://www.youtube.com/*
