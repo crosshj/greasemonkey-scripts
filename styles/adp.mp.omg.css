@@ -4,3 +4,7 @@ p.edit {
   top: 0px;
   padding-right: 1rem;
 }
+
+.container {
+  margin: 20px;
+}
