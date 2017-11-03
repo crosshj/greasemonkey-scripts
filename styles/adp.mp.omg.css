@@ -7,4 +7,5 @@ p.edit {
 
 .container {
   margin: 20px;
+  border: 1px solid black;
 }
