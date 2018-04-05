@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Router Fill
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
-// @version      0.1
+// @version      0.2
 // @description  auto fill and auto login for RT-AC68
 // @author       HJ Cross
 // @match        http://192.168.1.1/*
