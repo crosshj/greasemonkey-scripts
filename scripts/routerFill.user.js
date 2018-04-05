@@ -2,7 +2,7 @@
 // @name         Router Fill
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
 // @version      0.2
-// @description  auto fill and auto login for RT-AC68
+// @description  auto fill and auto login for RT-AC68, also for VMWare ESXi Web Client 6.0
 // @author       HJ Cross
 // @match        http://192.168.1.1/*
 // @match        http://router.asus.com/*
@@ -11,7 +11,6 @@
 // @require  http://crypto.stanford.edu/sjcl/sjcl.js
 // @grant    GM_getValue
 // @grant    GM_setValue
-// @grant    GM_sendKeys
 // @grant    GM_registerMenuCommand
 // ==/UserScript==
 
