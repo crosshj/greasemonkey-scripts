@@ -1,40 +1,40 @@
 // ==UserScript==
 // @name         Router Fill
 // @namespace    https://github.com/crosshj/greasemonkey-scripts
-// @updateURL    https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
-// @downloadURL  https://github.com/crosshj/greasemonkey-scripts/raw/master/scripts/routerFill.user.js
-// @version      0.1.3
+// @version      0.1
 // @description  auto fill and auto login for RT-AC68
 // @author       HJ Cross
 // @match        http://192.168.1.1/*
 // @match        http://router.asus.com/*
-// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
-// @require      http://crypto.stanford.edu/sjcl/sjcl.js
-// @grant        GM_getValue
-// @grant        GM_setValue
-// @grant        GM_registerMenuCommand
+// @match        *://192.168.1.168/ui/*
+// @require  http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
+// @require  http://crypto.stanford.edu/sjcl/sjcl.js
+// @grant    GM_getValue
+// @grant    GM_setValue
+// @grant    GM_sendKeys
+// @grant    GM_registerMenuCommand
 // ==/UserScript==
 
-// credit for encrypt/decrypt/store vars 
-// http://stackoverflow.com/questions/15268645/storing-user-input-in-a-greasemonkey-script-on-install
+// credit for encrypt/decrypt/store vars to http://stackoverflow.com/questions/15268645/storing-user-input-in-a-greasemonkey-script-on-install
 
-var encKey  = GM_getValue ("encKey",  "");
-var usr     = GM_getValue ("lognUsr", "");
-var pword   = GM_getValue ("lognPwd", "");
-var autoLogin = GM_getValue ("autoLogin", false);
+var encKey  = GM_getValue ("encKey" + location.hostname,  "");
+var usr     = GM_getValue ("lognUsr" + location.hostname, "");
+var pword   = GM_getValue ("lognPwd" + location.hostname, "");
+var autoLogin = GM_getValue ("autoLogin" + location.hostname, false);
 
 if ( ! encKey) {
     encKey  = prompt (
         'Script key not set for ' + location.hostname + '. Please enter a random string:',
         ''
     );
-    GM_setValue ("encKey", encKey);
+    GM_setValue ("encKey" + location.hostname, encKey);
 
     usr     = pword = "";   // New key makes prev stored values (if any) unable to decode.
 }
-usr         = decodeOrPrompt (usr,   "U-name", "lognUsr");
-pword       = decodeOrPrompt (pword, "P-word", "lognPwd");
-autoLogin   = decodeOrPrompt (autoLogin, "AutoLogin", "autoLogin");
+usr         = decodeOrPrompt (usr,   "U-name", "lognUsr" + location.hostname);
+pword       = decodeOrPrompt (pword, "P-word", "lognPwd" + location.hostname);
+autoLogin   = decodeOrPrompt (autoLogin, "AutoLogin", "autoLogin" + location.hostname);
+
 
 function decodeOrPrompt (targVar, userPrompt, setValVarName) {
     if (targVar) {
@@ -64,15 +64,15 @@ GM_registerMenuCommand ("Change Password", changePassword);
 GM_registerMenuCommand ("Change Auto Login", changeAutoLogin);
 
 function changeUsername () {
-    promptAndChangeStoredValue (usr,   "U-name", "lognUsr");
+    promptAndChangeStoredValue (usr,   "U-name", "lognUsr" + location.hostname);
 }
 
 function changePassword () {
-    promptAndChangeStoredValue (pword, "P-word", "lognPwd");
+    promptAndChangeStoredValue (pword, "P-word", "lognPwd" + location.hostname);
 }
 
 function changeAutoLogin () {
-    promptAndChangeStoredValue (autoLogin, "AutoLogin", "autoLogin");
+    promptAndChangeStoredValue (autoLogin, "AutoLogin", "autoLogin" + location.hostname);
 }
 
 function promptAndChangeStoredValue (targVar, userPrompt, setValVarName) {
@@ -83,17 +83,53 @@ function promptAndChangeStoredValue (targVar, userPrompt, setValVarName) {
     GM_setValue (setValVarName, encryptAndStore (targVar) );
 }
 
-(function() {
+function sendKeys(str, el){
+    el.value = str;
+    var evt= new Event('change');
+    el.dispatchEvent(evt);
+}
+
+function autoLoginGo() {
     'use strict';
-    var userNameEl = document.getElementById('login_username');
-    if (userNameEl && usr){
-        userNameEl.value=usr;
+    var interval = 100;
+    var maxElapsed = 50;
+    var waitForUserField = function(callback){
+        var elapsed = 0;
+        var checkExist = setInterval(function() {
+            elapsed += 1;
+            var userNameEl = document.getElementById('login_username') || document.getElementById('username');
+            if (userNameEl || elapsed > maxElapsed) {
+                callback(userNameEl);
+                clearInterval(checkExist);
+            }
+        }, interval);
+        return;
+    };
+
+    waitForUserField(function(userNameEl){
+        if (userNameEl && usr){
+            sendKeys(usr, userNameEl);
+        }
+        var pwordEl = document.querySelector('input[type="password"]');
+        if (pwordEl && pword){
+            sendKeys(pword, pwordEl);
+        }
+        if (autoLogin && autoLogin.toLowerCase() === 'true' && typeof login !== "undefined") {
+            login();
+        }
+    });
+}
+
+function hashHandler(){
+    if (location.hash === "#/login") {
+        autoLoginGo();
     }
-    var pwordEl = document.querySelector('input[type="password"]');
-    if (pwordEl && pword){
-        pwordEl.value=pword;
+}
+
+(function(){
+    window.addEventListener("hashchange", hashHandler, false);
+    if (location.hostname === "192.168.1.168" && location.hash !== "#/login") {
+        return;
     }
-    if (autoLogin && autoLogin.toLowerCase() === 'true' && login) {
-        login();
-    }
+    autoLoginGo();
 })();
